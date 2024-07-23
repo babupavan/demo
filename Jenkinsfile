@@ -5,17 +5,17 @@ pipeline {
         stage('Hello') {
             steps {
                 // Echo Hello, World!
-                echo 'Hello, World!'
+                echo 'Hello, this is feature branch'
             }
         }
     }
     
     post {
         success {
-            echo 'Pipeline completed successfully!'
+            echo 'feature completed successfully!'
         }
         failure {
-            echo 'Pipeline failed!'
+            echo 'feature failed!'
         }
     }
 }
