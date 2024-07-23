@@ -5,17 +5,17 @@ pipeline {
         stage('Hello') {
             steps {
                 // Echo Hello, World!
-                echo 'Hello, World!'
+                echo 'Hello, master barnch!'
             }
         }
     }
     
     post {
         success {
-            echo 'Pipeline completed successfully!'
+            echo 'master branch completed successfully!'
         }
         failure {
-            echo 'Pipeline failed!'
+            echo 'master branch failed!'
         }
     }
 }
