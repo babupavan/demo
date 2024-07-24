@@ -5,28 +5,30 @@ pipeline {
         stage('Hello') {
             steps {
                 // Echo Hello, World!
-                echo 'Hello, master barnch!'
+                echo 'Hello, master branch!'
+            }
+        }
+        
+        stage('Build') {
+            steps {
+                echo 'Hello, build step!'
+            }
+        }
+        
+        stage('Deploy') {
+            steps {
+                // Echo Hello, World!
+                echo 'Hello, deploy!'
             }
         }
     }
-
-       stage('build') {
-           steps {
-                echo 'Hello, builtd step!'
-            }
-        }
-        stage('deploy') {
-            steps {
-                // Echo Hello, World!
-                echo 'Hello, deploy'
-            }
-        }
+    
     post {
         success {
-            echo 'master branch completed successfully!'
+            echo 'Master branch completed successfully!'
         }
         failure {
-            echo 'master branch failed!'
+            echo 'Master branch failed!'
         }
     }
 }
