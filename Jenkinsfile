@@ -9,7 +9,18 @@ pipeline {
             }
         }
     }
-    
+
+       stage('build') {
+           steps {
+                echo 'Hello, builtd step!'
+            }
+        }
+        stage('deploy') {
+            steps {
+                // Echo Hello, World!
+                echo 'Hello, deploy'
+            }
+        }
     post {
         success {
             echo 'master branch completed successfully!'
